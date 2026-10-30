@@ -35,6 +35,7 @@ sourceSets {
 }
 
 repositories {
+    maven { url = "https://maven.createmod.net" }
     exclusiveContent {
         forRepository {
             maven {
@@ -201,8 +202,9 @@ dependencies {
     implementation("maven.modrinth:lithium:mc1.21.1-0.15.1-neoforge")
 
     // Create (distant train sampler on the server; client render path is Create-free)
-    compileOnly localJars("create-1.21.1-6.0.10.jar", "Ponder-NeoForge-1.21.1-1.0.64.jar",
-            "flywheel-neoforge-api-1.21.1-1.0.6.jar")
+    compileOnly("com.simibubi.create:create-1.21.1:6.0.10:slim") { transitive = false }
+    compileOnly("net.createmod.ponder:ponder-neoforge:1.0.64+mc1.21.1")
+    compileOnly("dev.engine-room.flywheel:flywheel-neoforge-api-1.21.1:1.0.6")
 
     //Sodium's options GUI is extended through this event API; reese's is its own hard dependency.
     compileOnly("maven.modrinth:sodium-options-api:neoforge-1.21.1-1.0.10")
