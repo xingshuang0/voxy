@@ -33,8 +33,6 @@ jobs:
       run: |
         mkdir -p libs/aero-spike
         wget -O libs/aero-spike/create-1.21.1-6.0.10.jar "https://cdn.modrinth.com/data/LNytGWDc/versions/UjX6dr61/create-1.21.1-6.0.10.jar"
-        wget -O libs/aero-spike/Ponder-NeoForge-1.21.1-1.0.64.jar "你的链接2"
-        wget -O libs/aero-spike/flywheel-neoforge-api-1.21.1-1.0.6.jar "你的链接3"
 
     - name: Build with Gradle Wrapper
       run: ./gradlew build
